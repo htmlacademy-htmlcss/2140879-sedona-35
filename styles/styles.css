@@ -5,36 +5,85 @@
   src: url("../fonts/pt-sans-narrow-bold.woff2") format("woff2");
   font-display: swap;
 }
-
-body {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  background-color: #f2f2f2;
+html {
+  height: 100%;
+  box-sizing: border-box;
 }
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  background-color: #f2f2f2;
+  display: flex;
+  line-height: 21px;
+  color: #000000;
+  list-style-type: none;
+  flex-direction: column;
+}
+.main-container
+{flex-grow: 1;}
 
+.visually-hidden {
+  display: none;
+}
 /* Header */
 .list-style-type {
   list-style-type: none;
 }
-.navigation {
-  background-color: #ffffff;
+.page-header{
+  font-size: 20px;
+  line-height: 24px;
+  min-height: 63px;
+  background-color: #fff;
+  width: 1200px;
+  margin: 0 auto;
+
+
 }
-.navigation-link {
+.navigation-header {
+  display: flex;
+  width: 1200;
+  margin: 0 auto;
+  justify-content: center;
+
+}
+.navigation-list{
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: 500px;
+}
+.navigation-menu{
   color: #000000;
   font-size: 20px;
   line-height: 24px;
   text-decoration: none;
   text-transform: capitalize;
   text-align: center;
+  margin - right: auto;
+  padding: 0;
+  width: 600px;
+}
+.navigation-user {
+  max-width: 300px;
+  margin-left: auto;
 }
 /* Картинка на заднем фоне */
-.main-index {
+.main-image {
   background-image: url(../images/index-background.jpg);
   background-repeat: no-repeat;
+}
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
   background-color: #ffffff;
-  color: #000000;
 }
 .background-image2 {
   background-image: url(../images/down-background.svg);
@@ -42,16 +91,48 @@ body {
   line-height: 57px;
 }
 .welcom-image {
-  line-height: 352px;
-  font-weight: 458px;
-  margin-bottom: 47.46%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 51px;
+}
+.greeting {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
 }
 
-.advantage-list li:nth-child(2) {
-  color: #ffffff;
-  line-height: 36px;
-  background-color: #83b3d3;
+/* Преимущества */
+
+.advantages-list{
+  display: grid;
+  margin: 0;
+  padding: 0;
 }
+.advantages-item {
+  width: 400px;
+  height: 384px;
+
+}
+.advantages-item:nth-child(1),
+.advantages-item:nth-child(5) {
+  background-color: #83b3d3;
+  color: #ffffff;
+}
+.advantages-item:nth-child(3),
+.advantages-item:nth-child(6),
+.advantages-item:nth-child(8) {
+  background-color: #83b3d3 20 %;
+  color: #000000;
+}
+.advantages-item:nth-child(4),
+.advantages-item:nth-child(5),
+.advantages-item:nth-child(5) {
+  background-color: #83b3d3 12 %;
+  color: #000000;
+}
+
 .want-button {
   color: #ffffff;
   border-radius: 4px;
@@ -62,18 +143,23 @@ body {
   text-transform: uppercase;
 }
 .greeting-description {
+  width: 620px;
   font-size: 30px;
   line-height: 36px;
-  text-align: center;
   text-transform: uppercase;
   color: #000000;
 }
 .greeting-reasons {
-  font-weight: 400;
+  width: 655px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
   color: #333333;
+}
+.advantages-list {
+  display: flex;
+  width: 400px;
+  height: 384px;
 }
 .advantages-title {
   font-size: 24px;
@@ -171,6 +257,18 @@ button {
   text-transform: uppercase;
   color: #ffffff;
 }
+
+.page-footer{
+  width: 1200px;
+}
+.footer-contacts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1060px;
+  padding: 40px,70px;
+}
+
 .footer-contacts-address-phone {
   font-weight: 400;
   font-size: 40px;
@@ -181,7 +279,11 @@ button {
   text-decoration: none;
 }
 
+
 /* catalog*/
+
+
+
 .hotel-item-title {
   font-size: 24px;
   line-height: 28px;
@@ -297,9 +399,18 @@ button {
   background-repeat: no-repeat;
   position: absolute;
   width: 1200px;
-  height: 412px;
   left: 0px;
   top: 64px;
+}
+
+.catalog-products-filter{
+  display: flex;
+  flex-direction: column;
+  padding: 70px;
+  padding-top: 35px;
+  width: 1200px;
+  height: 412px;
+
 }
 .catalog-products-title {
   font-size: 60px;
@@ -320,7 +431,4 @@ button {
 }
 .visually-hidden {
   display: none;
-}
-.page-footer {
-  background-color: #ffffff;
 }
