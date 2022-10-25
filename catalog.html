@@ -7,12 +7,14 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="navigation">
+      <nav class="navigation-header">
+        <div class="navigatuin-menu">
+          <ul class="navigation-list list-style-type">
+            <li class="navigation-item">
         <a class="navigation-logo" href="index.html">
-          <img class="page-header-logo" alt="Логотип Седона." src="images/logo up.svg" width="138px"
-          height="64px">
+          <img class="page-header-logo" alt="Логотип Седона." src="/images/logo_up.svg" width="138px" height="64px">
         </a>
-        <ul class="navigation-list list-style-type">
+      </li>
           <li class="navigation-item">
             <a class="navigation-link" href="main.html">Главная</a>
           </li>
@@ -23,17 +25,16 @@
             <a class="navigation-link" href="about.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
+      </div>
+        <ul class="navigation-user navigation-list list-style-type">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
-              <img src="images/search.svg" width="20" height="20" alt="Поиск">
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Лайки</span>
-              <img src="images/icons/icon-heart.svg" width="20" height="20"  alt="Лайки">
               <span class="count-hearts">12</span>
               <div class =green-circle></div>
             </a>
@@ -47,7 +48,7 @@
       </nav>
     </header>
 
-<main>
+<main class="main-container-catalog">
   <section class="catalog-products">
     <div class="catalog-products-filter">
     <h2 class="catalog-products-title">Гостиницы Седоны</h2>
@@ -60,6 +61,7 @@
         <a class="breadcrumbs-link">Гостиницы</a>
       </li>
     </ul>
+    <div class="catalog-filter-main">
     <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="catalog-filter-group">
         <legend class="catalog-filter-title">Инфраструктора:</legend>
@@ -108,7 +110,7 @@
           </li>
         </ul>
       </fieldset>
-
+    </div>
       <!-- <section class="price"> -->
 
       <div>
@@ -210,34 +212,36 @@
     </main>
     <footer class="page-footer">
       <section class="footer-contacts">
+        <div class="footer-net">
         <h2 class="visually-hidden">Контакты</h2>
-        <ul class="footer-social-list">
+        <ul class="footer-social-list list-style-type">
           <li class="footer-social-item">
-            <a class="button" href="#">
+            <a class="button" href="https://vk.com/htmlacademy">
               <img src="images/vk.svg" width="24" height="14" alt="Вконтакте">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="#">
+            <a class="button" href="https://t.me/htmlacademy">
               <img src="images/telegram.svg" width="18" height="15" alt="telegram">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="#">
+            <a class="button" href="https://www.youtube.com/user/htmlacademyru">
               <img src="images/youtube .svg" width="22" height="17" alt="youtube">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
         </ul>
-        </section>
+      </div>
         <div class="footer-number">
           <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </div>
         <div class="footer-logo">
-          <img class="footer-icon" src="images/Logo down.svg" width="115" height="33" alt="Логотип html academy"></img>
+          <img class="footer-icon" src="images/Logo_down.svg" width="115" height="33" alt="Логотип html academy"></img>
         </div>
+      </section>
     </footer>
   </body>
 </html>
