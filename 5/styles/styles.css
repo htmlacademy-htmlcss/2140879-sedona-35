@@ -24,7 +24,6 @@ body {
   display: flex;
   line-height: 21px;
   color: #000000;
-  list-style-type: none;
   flex-direction: column;
 }
 .main-container {
@@ -42,7 +41,9 @@ body {
   overflow: hidden;
 }
 /* Header */
-.list-style-type {
+.list-reset {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 .page-header {
@@ -107,7 +108,7 @@ body {
 }
 /* Картинка на заднем фоне */
 .main-image {
-  background-image: url(../images/index-background.jpg);
+  background-image: url(../images/index/index-background.jpg);
   background-repeat: no-repeat;
 }
 .page-container {
@@ -116,7 +117,7 @@ body {
   background-color: #ffffff;
 }
 .background-image2 {
-  background-image: url(../images/down-background.svg);
+  background-image: url(../images/icons/down-background.svg);
   font-size: 1200px 485px;
   line-height: 57px;
 }
@@ -125,6 +126,11 @@ body {
   margin: 0 auto;
   padding-top: 51px;
   padding-bottom: 82px;
+}
+
+.advantages-list-item-decorated::before {
+  content: "";
+  color: rgba(0, 0, 0, 0.3);
 }
 .greeting {
   display: block;
@@ -238,7 +244,7 @@ body {
 }
 
 .subscribe {
-  background-image: url(../images/Subscribe.jpg);
+  background-image: url(../images/index/Subscribe.jpg);
   align-items: center;
   padding: 96px 258px 104px;
   background-repeat: no-repeat;
@@ -428,6 +434,7 @@ button {
 }
 
 .hotel-catalog-list {
+  margin-bottom: 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -465,30 +472,33 @@ button {
   background-repeat: no-repeat;
 }
 .catalog-products {
-  background-image: url(../images/Subscribe.jpg);
+  background-image: url(../images/index/Subscribe.jpg);
   background-repeat: no-repeat;
   width: 1200px;
 }
-.catalog-filter-main {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
+.catalog-filter {
+  display: flex;
   gap: 70px;
 }
-.catalog-filter-group {
-  grid-column: 1 / 2;
-}
-.catalog-filter-type {
-  grid-column: 2/ 3;
-}
-.catalog-products-filter {
-  display: grid;
-}
+
 .catalog-products-title {
   font-size: 60px;
   line-height: 78px;
   color: #ffffff;
 }
-
+.hotel-cards {
+  display: grid;
+  grid-template-rows: 212px repeat(4, auto);
+  grid-gap: 16px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  padding: 20px;
+}
+.product-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .control {
   font-weight: 400;
   font-size: 18px;
